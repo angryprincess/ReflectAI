@@ -8,99 +8,99 @@ body {
 
 @layer base {
   :root {
-    --background: 210 40% 98%; /* Lighter grey for overall background */
-    --foreground: 210 20% 25%; /* Darker, softer text */
+    --background: 0 0% 100%; /* White background for light theme */
+    --foreground: 220 20% 25%; /* Darker, softer text */
 
     --card: 0 0% 100%; /* White cards */
-    --card-foreground: 210 20% 25%;
+    --card-foreground: 220 20% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 25%;
+    --popover-foreground: 220 20% 25%;
 
-    --primary: 195 70% 45%; /* A bit darker, more saturated calm blue for main actions */
+    --primary: 275 70% 55%; /* Iris Violet for light theme */
     --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 0 0% 93%; /* Light grey #EEEEEE */
-    --secondary-foreground: 210 15% 35%;
+    --secondary: 220 20% 96%; /* Light grey */
+    --secondary-foreground: 220 15% 35%;
 
-    --muted: 0 0% 90%; /* Slightly darker muted grey */
-    --muted-foreground: 210 15% 55%; /* Softer muted text */
+    --muted: 220 20% 92%; /* Slightly darker muted grey */
+    --muted-foreground: 220 15% 55%; /* Softer muted text */
 
-    --accent: 283 40% 88%; /* Soft lavender #E1BEE7 */
-    --accent-foreground: 283 25% 30%; /* Darker lavender text on accent */
+    --accent: 320 70% 90%; /* Light Pink/Magenta */
+    --accent-foreground: 320 40% 35%; /* Darker pink/magenta text on accent */
 
     --destructive: 0 72% 51%; /* Default destructive red */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89%; /* Light grey border */
-    --input: 0 0% 92%; /* Slightly lighter input background */
-    --ring: 195 70% 50%; /* Ring color related to primary */
+    --border: 220 20% 88%; /* Light grey border */
+    --input: 220 20% 94%; /* Slightly lighter input background */
+    --ring: 275 70% 60%; /* Ring color related to primary */
 
     --radius: 0.5rem;
 
-    /* Chart Colors */
-    --chart-1: 174 38% 64%; /* Soft Teal #80CBC4 */
-    --chart-2: 190 67% 85%; /* Calm Blue #B2EBF2 */
-    --chart-3: 283 40% 75%; /* Lighter Lavender for charts */
-    --chart-4: 210 50% 70%; /* A general blueish grey */
-    --chart-5: 30 80% 70%;  /* A warm accent for charts */
+    /* Chart Colors for light theme */
+    --chart-1: 275 65% 60%; /* Primary Iris */
+    --chart-2: 320 60% 60%; /* Accent Pink/Magenta */
+    --chart-3: 295 60% 70%; /* Lighter Purple */
+    --chart-4: 250 50% 55%; /* Indigo/Blueish Purple */
+    --chart-5: 220 30% 70%; /* Muted Blue/Grey */
     
-    /* Sidebar specific colors for ShadCN Sidebar component */
-    --sidebar-background: 0 0% 100%; /* White sidebar for clean look */
-    --sidebar-foreground: 210 20% 30%;
-    --sidebar-primary: 195 70% 45%; /* Primary color for active/selected items */
+    /* Sidebar specific colors for light theme */
+    --sidebar-background: 0 0% 98%; /* Off-white sidebar */
+    --sidebar-foreground: 220 20% 30%;
+    --sidebar-primary: 275 70% 55%; /* Primary Iris */
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%; /* Very light grey for hover/active backgrounds */
-    --sidebar-accent-foreground: 195 70% 45%; /* Primary color for text on accent */
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 195 70% 50%;
+    --sidebar-accent: 220 20% 94%; /* Very light grey for hover/active backgrounds */
+    --sidebar-accent-foreground: 275 70% 55%; /* Primary Iris for text on accent */
+    --sidebar-border: 220 20% 85%;
+    --sidebar-ring: 275 70% 60%;
   }
 
   .dark {
-    --background: 210 20% 12%;
-    --foreground: 0 0% 95%;
+    --background: 220 10% 7%; /* Very dark, slightly cool matte black */
+    --foreground: 220 10% 85%; /* Off-white / very light grey */
 
-    --card: 210 20% 15%;
-    --card-foreground: 0 0% 95%;
+    --card: 220 10% 10%; /* Slightly lighter than bg */
+    --card-foreground: 220 10% 85%;
 
-    --popover: 210 20% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 220 10% 10%;
+    --popover-foreground: 220 10% 85%;
 
-    --primary: 195 60% 55%; /* Brighter blue for dark mode */
-    --primary-foreground: 210 20% 10%;
+    --primary: 275 85% 72%; /* Vibrant Iris Violet */
+    --primary-foreground: 275 30% 15%; /* Dark purple for text on primary */
 
-    --secondary: 210 15% 25%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 220 10% 15%; /* Dark grey */
+    --secondary-foreground: 220 10% 75%;
 
-    --muted: 210 15% 22%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 220 10% 12%; /* Darker muted grey */
+    --muted-foreground: 220 10% 55%; /* Softer muted text */
 
-    --accent: 283 30% 60%; /* Darker lavender */
-    --accent-foreground: 0 0% 95%;
+    --accent: 320 70% 70%; /* Futuristic Pink/Magenta as accent */
+    --accent-foreground: 320 20% 15%; /* Dark text on accent */
 
-    --destructive: 0 60% 45%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 15% 30%;
-    --input: 210 15% 28%;
-    --ring: 195 60% 60%;
+    --border: 220 10% 20%; /* Dark grey border */
+    --input: 220 10% 18%; /* Slightly lighter input background */
+    --ring: 275 85% 75%; /* Ring color related to primary */
 
     /* Chart Colors for dark theme */
-    --chart-1: 174 45% 55%;
-    --chart-2: 190 55% 65%;
-    --chart-3: 283 35% 50%;
-    --chart-4: 210 40% 50%;
-    --chart-5: 30 70% 60%;
+    --chart-1: 275 80% 70%; /* Primary Iris */
+    --chart-2: 320 65% 65%; /* Accent Pink/Magenta */
+    --chart-3: 295 70% 75%; /* Lighter Purple */
+    --chart-4: 250 60% 60%; /* Indigo/Blueish Purple */
+    --chart-5: 220 20% 50%; /* Muted Blue/Grey for contrast or neutral */
     
     /* Sidebar specific colors for dark theme */
-    --sidebar-background: 210 20% 10%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 195 60% 55%;
-    --sidebar-primary-foreground: 210 20% 10%;
-    --sidebar-accent: 210 15% 20%;
-    --sidebar-accent-foreground: 195 60% 55%;
-    --sidebar-border: 210 15% 25%;
-    --sidebar-ring: 195 60% 60%;
+    --sidebar-background: 220 10% 5%; /* Even darker for sidebar */
+    --sidebar-foreground: 220 10% 80%;
+    --sidebar-primary: 275 85% 72%; /* Primary Iris */
+    --sidebar-primary-foreground: 275 30% 15%;
+    --sidebar-accent: 220 10% 12%; /* Dark hover for items */
+    --sidebar-accent-foreground: 275 85% 72%; /* Primary Iris on hover */
+    --sidebar-border: 220 10% 15%;
+    --sidebar-ring: 275 85% 75%;
   }
 }
 
