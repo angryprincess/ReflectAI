@@ -18,6 +18,7 @@ export default function MoodTrackingPage() {
   } = useAppStore();
   const { toast } = useToast();
   const [overallSentiment, setOverallSentiment] = useState<string | undefined>(undefined);
+  const [moodTrendSummary, setMoodTrendSummary] = useState<string | undefined>(undefined);
   const [isMoodAnalysisLoading, setIsMoodAnalysisLoading] = useState(false); 
 
 
@@ -29,6 +30,7 @@ export default function MoodTrackingPage() {
     setIsMoodAnalysisLoading(true);
     setMoodTrends([]); 
     setOverallSentiment(undefined);
+    setMoodTrendSummary(undefined);
 
     try {
       const moodInput: AnalyzeMoodTrendsInput = {
@@ -37,11 +39,13 @@ export default function MoodTrackingPage() {
       const moodResult: AnalyzeMoodTrendsOutput = await analyzeMoodTrends(moodInput);
       setMoodTrends(moodResult.moodClusters);
       setOverallSentiment(moodResult.overallSentiment);
+      setMoodTrendSummary(moodResult.trendSummary);
       toast({ title: 'Mood Analysis Complete', description: 'Your mood trends have been updated.' });
     } catch (error) {
       console.error('Error analyzing mood trends:', error);
       setMoodTrends([]); 
       setOverallSentiment(undefined);
+      setMoodTrendSummary(undefined);
       toast({ title: 'Error', description: 'Could not analyze mood trends at this time. Please try again.', variant: 'destructive' });
     } finally {
       setIsMoodAnalysisLoading(false);
@@ -80,6 +84,7 @@ export default function MoodTrackingPage() {
       <MoodChart 
         moodTrends={moodTrends} 
         overallSentiment={overallSentiment} 
+        moodTrendSummary={moodTrendSummary}
         isLoading={isMoodAnalysisLoading}
         error={
             moodTrends.length === 0 && !isMoodAnalysisLoading && journalEntries.length > 0 ? "Click 'Analyze Moods' to see your trends." :

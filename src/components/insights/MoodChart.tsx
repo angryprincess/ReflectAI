@@ -10,6 +10,7 @@ import { format, parseISO } from 'date-fns';
 interface MoodChartProps {
   moodTrends: MoodTrendPoint[];
   overallSentiment?: string;
+  moodTrendSummary?: string;
   isLoading: boolean;
   error?: string | null;
 }
@@ -20,23 +21,23 @@ const chartConfig = {
   },
   positive: {
     label: 'Positive',
-    color: 'hsl(var(--chart-1))', // Soft Teal
+    color: 'hsl(var(--chart-1))', 
     icon: TrendingUp,
   },
   neutral: {
     label: 'Neutral',
-    color: 'hsl(var(--chart-4))', // General blueish grey
+    color: 'hsl(var(--chart-4))', 
     icon: MinusCircle,
   },
   negative: {
     label: 'Negative',
-    color: 'hsl(var(--chart-5))', // Warm Accent (e.g. orangey/reddish)
+    color: 'hsl(var(--chart-5))', 
     icon: TrendingDown,
   },
 } satisfies ChartConfig;
 
 
-export default function MoodChart({ moodTrends, overallSentiment, isLoading, error }: MoodChartProps) {
+export default function MoodChart({ moodTrends, overallSentiment, moodTrendSummary, isLoading, error }: MoodChartProps) {
   if (isLoading) {
      return (
       <Card>
@@ -96,7 +97,14 @@ export default function MoodChart({ moodTrends, overallSentiment, isLoading, err
     <Card className="shadow-lg">
       <CardHeader>
         <CardTitle className="text-2xl">Mood Trends Over Time</CardTitle>
-        {overallSentiment && <CardDescription>Overall Sentiment: <span className="font-semibold">{overallSentiment}</span></CardDescription>}
+        {overallSentiment && (
+            <CardDescription>
+                Overall Sentiment: <span className="font-semibold">{overallSentiment}</span>
+            </CardDescription>
+        )}
+        {moodTrendSummary && (
+            <p className="text-sm text-muted-foreground pt-1">{moodTrendSummary}</p>
+        )}
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="h-[300px] w-full">
@@ -147,3 +155,4 @@ export default function MoodChart({ moodTrends, overallSentiment, isLoading, err
     </Card>
   );
 }
+
