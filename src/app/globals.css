@@ -57,10 +57,10 @@ body {
   }
 
   .dark {
-    --background: 220 10% 7%; /* Very dark, slightly cool matte black */
+    --background: 0 0% 2%; /* Deep space black */
     --foreground: 220 10% 85%; /* Off-white / very light grey */
 
-    --card: 220 10% 10%; /* Slightly lighter than bg */
+    --card: 220 10% 10%; /* Slightly lighter than bg, cool dark grey */
     --card-foreground: 220 10% 85%;
 
     --popover: 220 10% 10%;
@@ -93,7 +93,7 @@ body {
     --chart-5: 220 20% 50%; /* Muted Blue/Grey for contrast or neutral */
     
     /* Sidebar specific colors for dark theme */
-    --sidebar-background: 220 10% 5%; /* Even darker for sidebar */
+    --sidebar-background: 0 0% 1%; /* Even deeper space black for sidebar */
     --sidebar-foreground: 220 10% 80%;
     --sidebar-primary: 275 85% 72%; /* Primary Iris */
     --sidebar-primary-foreground: 275 30% 15%;
