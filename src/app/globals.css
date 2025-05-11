@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +10,7 @@ body {
 @layer base {
   :root {
     --background: 0 0% 100%; /* White background for light theme */
-    --foreground: 220 20% 25%; /* Darker, softer text */
+    --foreground: 220 20% 25%;  /* Darker, softer text */
 
     --card: 0 0% 100%; /* White cards */
     --card-foreground: 220 20% 25%;
@@ -45,60 +46,60 @@ body {
     --chart-4: 250 50% 55%; /* Indigo/Blueish Purple */
     --chart-5: 220 30% 70%; /* Muted Blue/Grey */
     
-    /* Sidebar specific colors for light theme */
+    /* Sidebar specific colors for light theme - Corrected */
     --sidebar-background: 0 0% 98%; /* Off-white sidebar */
-    --sidebar-foreground: 220 20% 30%;
-    --sidebar-primary: 275 70% 55%; /* Primary Iris */
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-foreground: 220 20% 30%; /* Dark text on light sidebar */
+    --sidebar-primary: 275 70% 55%; /* Primary Iris - same as main primary */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text on primary */
     --sidebar-accent: 220 20% 94%; /* Very light grey for hover/active backgrounds */
     --sidebar-accent-foreground: 275 70% 55%; /* Primary Iris for text on accent */
-    --sidebar-border: 220 20% 85%;
-    --sidebar-ring: 275 70% 60%;
+    --sidebar-border: 220 20% 85%; /* Light border */
+    --sidebar-ring: 275 70% 60%; /* Ring color related to primary */
   }
 
   .dark {
-    --background: 0 0% 2%; /* Deep space black */
+    --background: 0 0% 1%; /* Deep space black / Matte black */
     --foreground: 220 10% 85%; /* Off-white / very light grey */
 
-    --card: 220 10% 10%; /* Slightly lighter than bg, cool dark grey */
+    --card: 220 10% 6%; /* Darker card, slightly different from background */
     --card-foreground: 220 10% 85%;
 
-    --popover: 220 10% 10%;
+    --popover: 220 10% 5%; /* Darker popover */
     --popover-foreground: 220 10% 85%;
 
-    --primary: 275 85% 72%; /* Vibrant Iris Violet */
-    --primary-foreground: 275 30% 15%; /* Dark purple for text on primary */
+    --primary: 275 85% 72%; /* Lighter Iris Violet for dark theme */
+    --primary-foreground: 275 30% 15%; /* Dark text on dark theme primary */
+    
+    --secondary: 220 10% 15%; /* Darker grey for secondary */
+    --secondary-foreground: 220 10% 75%; /* Lighter text for secondary */
 
-    --secondary: 220 10% 15%; /* Dark grey */
-    --secondary-foreground: 220 10% 75%;
+    --muted: 220 10% 10%; /* Darker muted grey */
+    --muted-foreground: 220 10% 60%; /* Softer muted text for dark */
 
-    --muted: 220 10% 12%; /* Darker muted grey */
-    --muted-foreground: 220 10% 55%; /* Softer muted text */
-
-    --accent: 320 70% 70%; /* Futuristic Pink/Magenta as accent */
-    --accent-foreground: 320 20% 15%; /* Dark text on accent */
-
-    --destructive: 0 70% 55%;
+    --accent: 320 80% 75%; /* Adjusted Light Pink/Magenta for dark theme */
+    --accent-foreground: 320 30% 20%; /* Dark text on dark theme accent */
+    
+    --destructive: 0 60% 50%; /* Slightly adjusted destructive for dark */
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 10% 20%; /* Dark grey border */
-    --input: 220 10% 18%; /* Slightly lighter input background */
-    --ring: 275 85% 75%; /* Ring color related to primary */
+    --border: 220 10% 15%; /* Dark border */
+    --input: 220 10% 12%; /* Dark input background */
+    --ring: 275 85% 75%; /* Ring color related to dark primary */
 
     /* Chart Colors for dark theme */
-    --chart-1: 275 80% 70%; /* Primary Iris */
-    --chart-2: 320 65% 65%; /* Accent Pink/Magenta */
-    --chart-3: 295 70% 75%; /* Lighter Purple */
-    --chart-4: 250 60% 60%; /* Indigo/Blueish Purple */
-    --chart-5: 220 20% 50%; /* Muted Blue/Grey for contrast or neutral */
-    
-    /* Sidebar specific colors for dark theme */
-    --sidebar-background: 0 0% 1%; /* Even deeper space black for sidebar */
+    --chart-1: 275 75% 70%;
+    --chart-2: 320 70% 70%;
+    --chart-3: 295 70% 80%;
+    --chart-4: 250 60% 65%;
+    --chart-5: 220 40% 80%;
+
+    /* Sidebar specific colors for dark theme - Corrected and integrated */
+    --sidebar-background: 0 0% 1%; /* Deep space black for sidebar (same as main background) */
     --sidebar-foreground: 220 10% 80%;
-    --sidebar-primary: 275 85% 72%; /* Primary Iris */
-    --sidebar-primary-foreground: 275 30% 15%;
-    --sidebar-accent: 220 10% 12%; /* Dark hover for items */
-    --sidebar-accent-foreground: 275 85% 72%; /* Primary Iris on hover */
+    --sidebar-primary: 275 85% 72%; /* Primary Iris (dark theme variant) */
+    --sidebar-primary-foreground: 275 30% 15%; /* Text on dark primary */
+    --sidebar-accent: 220 10% 12%; /* Dark hover for items (greyish) */
+    --sidebar-accent-foreground: 275 85% 72%; /* Primary Iris on hover (text color on sidebar accent) */
     --sidebar-border: 220 10% 15%;
     --sidebar-ring: 275 85% 75%;
   }
